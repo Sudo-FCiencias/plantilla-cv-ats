@@ -1,0 +1,87 @@
+% Este archivo contiene todas las configuraciones, paquetes y comandos personalizados necesarios para la plantilla de CV.
+% Compilador: pdfLaTeX
+% Versión de TeX: 2024
+
+% Configuración de página completa (márgenes mínimos)
+\usepackage[empty]{fullpage}
+% Personalización de formato de títulos de secciones
+\usepackage{titlesec}
+% Símbolos adicionales (teléfono, email, etc.)
+\usepackage{marvosym}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% Íconos de redes sociales (GitHub, LinkedIn, etc.)
+\usepackage{fontawesome5}
+\usepackage{multicol}
+% Elimina el espacio entre columnas
+\setlength{\columnsep}{0pt}
+% Ajusta el espacio vertical entre columnas
+\setlength{\multicolsep}{2pt plus 1pt minus 0.5pt}
+% Usa Roboto como fuente sans-serif por defecto
+% Otras opciones: helvet, arial, etc.
+\usepackage[sfdefault]{roboto}
+% Estilo de página fancy (con encabezados personalizados)
+\pagestyle{fancy}
+\fancyhf{} % Limpia encabezados y pies de página
+
+% Elimina las líneas horizontales de encabezado y pie de página
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Estos valores controlan el espacio alrededor del contenido del CV
+% Ajústalos según tus preferencias
+
+\addtolength{\oddsidemargin}{-0.6in} % Margen izquierdo (páginas impares)
+\addtolength{\evensidemargin}{-0.6in} % Margen izquierdo (páginas pares)
+\addtolength{\textwidth}{1.2in} % Ancho del texto
+\addtolength{\topmargin}{-.6in} % Margen superior
+\addtolength{\textheight}{1.0in} % Altura del texto
+
+% Define cómo se verán los títulos de las secciones
+% \large = tamaño grande
+% \bfseries = negrita
+% \raggedright = alineado a la izquierda
+% \titlerule = línea horizontal debajo del título
+
+\titleformat{\section}{ \large\bfseries\scshape\raggedright }{}{0pt}{}[\titlerule]
+
+% Asegura que el PDF resultante sea "machine readable" (ATS-friendly)
+\pdfgentounicode=1
+
+% Comando para crear un ítem individual en listas
+% Uso: \resumeItem{Descripción del logro o responsabilidad}
+\newcommand{\cvItem}[1]{ \item\small{#1} }
+
+% Comando para crear un subencabezado de experiencia o educación
+% Parámetros:
+%   #1 = Título del puesto o institución (en negrita)
+%   #2 = Fecha (alineada a la derecha)
+%   #3 = Subtítulo (empresa/ubicación, en cursiva)
+%   #4 = Período adicional (en cursiva, alineado a la derecha)
+% Uso:
+% \resumeSubheading
+%   {Ingeniero de Software}{Enero 2020 - Presente}
+%   {Empresa XYZ}{Ciudad, País}
+\newcommand{\cvSubtitulo}[4]{
+\vspace{-2pt}
+\item
+\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & #2          \\
+  \textit{#3} & \textit{#4} \\
+\end{tabular*}
+\vspace{-7pt}
+}
+
+% Redefine el símbolo de las listas de segundo nivel (sub-bullets)
+% Usa un bullet point más pequeño
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Comando para iniciar una lista de subsecciones
+% Ajusta el margen izquierdo y elimina las etiquetas por defecto
+\newcommand{\ListaSubtitulo}{ \begin{itemize}[leftmargin=0.1in, label={}] }
+
+% Comando para cerrar la lista de subsecciones
+\newcommand{\ListaSubtituloFin}{ \end{itemize} }

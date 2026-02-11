@@ -1,0 +1,163 @@
+% Plantilla profesional de CV de una página optimizada para
+% sistemas de seguimiento de candidatos (ATS-friendly). La
+% es que asi como edites este archivo para mandar en digital,
+% puedas imprimirlo en tus entrevistas presenciales. 
+% 
+% Instrucciones:
+% - Reemplaza todos los valores de ejemplo con tu información (nombres de usuario, nombres, etc.)
+% - Comenta las secciones que no desees incluir (Proyectos, etc.)
+% - Si lo necesitas, modifica config.text para ajustar según tus necesidades.
+
+\documentclass[a4paper, 10pt]{article}
+\input{config.tex}
+
+\begin{document}
+  %==================================================================
+  % Encabezado
+  % - Aqui incluyes tu información de contacto.
+  % - Reemplaza los valores con tu información personal
+  % - Sigue los formatos para saber que debes llenar.
+
+  \begin{center}
+    % Nombre completo en grande y negrita. No uses pseudónimos.
+    \textbf{\LARGE Tu Nombre Completo} \\
+    \vspace{3mm}
+
+    % Información de contacto con íconos
+    \small \faPhone \hspace{1mm} 5544778833 $|$ \hspace{1mm} \faEnvelope \hspace{1mm}
+    \href{mailto:correo@mail.com}{correo@mail.com} $|$ \hspace{1mm} \faLinkedin \hspace{1mm}
+    \href{https://www.linkedin.com/in/username/}{https://www.linkedin.com/in/username/}
+    $|$ \hspace{1mm} \faGithub \hspace{1mm} \href{https://github.com/username}{https://github.com/username}
+  \end{center}
+
+  %==================================================================
+  % Resumen Profesional
+  % - Un párrafo breve (3-4 líneas) que resuma tu perfil profesional
+  % - Incluye: título profesional, años de experiencia, habilidades clave, objetivos
+  % etc.
+
+  \section{Resumen Profesional}
+  Escribe aquí tu resumen profesional. Ejemplo: "Ingeniero de Software con 3+
+  años de experiencia en desarrollo full-stack. Especializado en Python,
+  JavaScript y arquitecturas cloud. Apasionado por crear soluciones escalables y liderar
+  equipos ágiles. Busco contribuir en proyectos innovadores de tecnología."
+
+  %==================================================================
+  % Habilidades Blandas y Técnicas
+  % - Organiza tus habilidades en categorías usando múltiples columnas.
+  % - Donde sientas que debe cortarse la linea, ocupar // es suficiente.
+
+  \section{Habilidades}
+  \ListaSubtitulo
+  \begin{multicols}{2}
+    {
+    % Columna 1: Habilidades técnicas
+    \cvItem{\textbf{Lenguajes de Programación}: Ej: Python, Java, JavaScript, C++} \cvItem{\textbf{Frameworks \& Librerías}: Ej: React, Django, Spring Boot, Node.js} \cvItem{\textbf{Bases de Datos}: Ej: MySQL, PostgreSQL, MongoDB, Redis} \cvItem{\textbf{Herramientas \& DevOps}: Ej: Git, Docker, Kubernetes, AWS} }
+    {
+    % Columna 2: Idiomas y habilidades blandas
+    \cvItem{\textbf{Idiomas}: Ej: Español (Nativo), Inglés (Avanzado - C1), Francés (Intermedio - B2)} \cvItem{\textbf{Habilidades Blandas}: Ej: Liderazgo de equipos, Comunicación técnica, Resolución de problemas, Metodologías Ágiles (Scrum), Gestión del tiempo} }
+  \end{multicols}
+  \ListaSubtituloFin
+
+  %==================================================================
+  % Educación
+  % - Lista tus títulos académicos en orden cronológico inverso (los que tengan
+  % más peso primero, como un doctorado o una licenciatura).
+  % - Si aún estå en curso, puedes poner una fecha aproximada de término.
+
+  \section{Educación}
+  \ListaSubtitulo
+
+  \cvSubtitulo {Universidad ABC}{Ciudad, País} {Licenciatura en ABCDEFG}{Mes 20XX - Mes 20XX}
+  % Opcional: Agrega logros académicos, promedio (si es alto), honores, etc.
+  % \ListaSubtitulo
+  %     \cvItem{\textbullet\ Promedio: 9.5/10.0}
+  %     \cvItem{\textbullet\ Mención honorífica}
+  % \ListaSubtituloFin
+
+  % Agrega más títulos si los tienes (maestría, doctorado, etc.)
+
+  \ListaSubtituloFin
+
+  %=================================================================
+  % Proyectos (OpcionaL)
+  % - Usa esta sección si quieres incluir proyectos personales o académicos
+  % - Útil para estudiantes o personas con poca experiencia laboral
+
+  \section{Proyectos Destacados}
+  \ListaSubtitulo
+
+  \cvSubtitulo
+  {Nombre del Proyecto $|$ \faGithub \href{https://github.com/username/repo}{ Repositorio en GitHub}}
+  {Mes 20XX} {Descripción en una linea del Proyecto}{Lista de tecnologías usadas.}
+  \ListaSubtitulo \cvItem{\textbullet\ Describe qué hace el proyecto y su impacto.}
+  \cvItem{\textbullet\ Tecnologías o metodologías destacadas que usaste.} \cvItem{\textbullet\ Resultados o métricas si las hay.}
+  \ListaSubtituloFin
+
+  \ListaSubtituloFin
+
+  %=================================================================
+  % Experiencia Laboral
+  % - Lista tu experiencia laboral en orden cronológico inverso (más reciente primero)
+  % - Para cada puesto, incluye 2-4 logros cuantificables
+
+  \section{Experiencia Profesional}
+  \ListaSubtitulo
+
+  % Primer trabajo (más reciente)
+  \cvSubtitulo {Nombre del Puesto}{Mes 20XX - Presente} {Empresa ABC}{Ciudad, País}
+  \ListaSubtitulo \cvItem{\textbullet\ Describe un logro importante con métricas. Ej: "Desarrollé una API REST que redujo el tiempo de respuesta en un 40\%, mejorando la experiencia de 10,000+ usuarios"}
+  \cvItem{\textbullet\ Otro logro. Ej: "Lideré un equipo de 5 desarrolladores en la implementación de una arquitectura de microservicios, resultando en una reducción del 30\% en costos de infraestructura"}
+  \cvItem{\textbullet\ Otro logro o responsabilidad relevante} \ListaSubtituloFin
+
+  % Puedes agregar más trabajos copiando el formato anterior
+
+  \ListaSubtituloFin
+
+  %==================================================================
+  % Actividades Extracurriculares (Opcional)
+  % - Incluye voluntariado, liderazgo estudiantil, comunidades tech, etc.
+
+  \section{Actividades Extracurriculares}
+  \ListaSubtitulo
+
+  \cvSubtitulo {Puesto}{Mayo 2024 - Enero 2026} {Comunidad Tech ABC}{Ciudad, País}
+  \ListaSubtitulo \cvItem{\textbullet\ Describe tu rol y contribuciones} \cvItem{\textbullet\ Logros o impacto medible si es posible}
+  \ListaSubtituloFin
+
+  % Puedes agregar más actividades
+
+  \ListaSubtituloFin
+
+  %==================================================================
+  % Certificaciones / Credenciales.
+  % - Lista certificaciones profesionales relevantes con enlaces que lleven a la
+  % misma.
+  % - También añade las "badges" que tengas por completar algun curso.
+
+  \section{Certificaciones \& Credenciales}
+  \ListaSubtitulo
+  \begin{multicols}{2}
+    { \cvItem{\textbf{Certificación en XYZ} \href{example.com}{$|$ Ver Credencial}} { \cvItem{\textbf{Completitud de Curso} $|$ ID: 000000}}
+    % Agrega más certificaciones según necesites
+    }
+  \end{multicols}
+  \ListaSubtituloFin
+\end{document}
+
+%==================================================================
+% Notas y Tips Finales.
+%
+% - Mantén tu CV en 1-2 páginas máximo
+% - Usa verbos fuertes al inicio de cada bullet point:
+%   Desarrollé, Implementé, Lideré, Optimicé, Diseñé, Automaticé...
+% - Siempre que sea posible, incluye números:
+%    - "Mejoré el rendimiento en un 40%"
+%    - "Gestioné un equipo de 5 personas"
+%    - "Reduje costos en $10,000 anuales"
+% - Ajusta tu CV para cada solicitud de trabajo, no uses el mismo para todo.       
+%   De ésta manera destacas las habilidades y experiencias más relevantes para el  %   puesto.
+% - Usa palabras clave del anuncio de trabajo para que tu CV pase los sistemas
+%   automatizados de selección.
+% - Verifica ortografía y gramática. Un error puede descalificarte
+% - Mantén un formato consistente (fechas, mayúsculas, puntos)
