@@ -1,6 +1,7 @@
 # Plantilla de CV en LaTeX
 
 Una plantilla profesional y limpia para crear currículums en formato PDF utilizando LaTeX, optimizada para sistemas de seguimiento de candidatos (ATS-friendly).
+Pensada para tener al mismo tiempo una version digital y, si se necesita, impresa, del mismo CV.
 
 - [Estructura de Archivos](#estructura-de-archivos)
 - [Paquetes Requeridos](#paquetes-requeridos)
@@ -26,7 +27,7 @@ Esta plantilla utiliza los siguientes paquetes de LaTeX:
 - `hyperref` - Hipervínculos en el documento (configurado con hidelinks)
 - `enumitem` - Personalización de listas (itemize, enumerate)
 - `fancyhdr` - Encabezados y pies de página personalizados
-- `babel` - Soporte multiidioma (configurado para inglés)
+- `babel` - Soporte multiidioma (configurado para inglés y español.)
 - `tabularx` - Tablas con ancho ajustable automáticamente
 - `fontawesome5` - Íconos de redes sociales (GitHub, LinkedIn, etc.)
 - `multicol` - Soporte para múltiples columnas
